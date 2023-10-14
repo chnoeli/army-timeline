@@ -1,0 +1,74 @@
+h2 {
+    font-size: 32px;
+}
+
+.month {
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 18px;
+    .title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .grid {
+        grid-template-columns: 7;
+        display: grid;
+        font-size: 28px;
+        grid-auto-rows: 4em;
+        grid-auto-columns: 4em;
+        grid-gap: 3px;
+        justify-content: center;
+    }
+    .day {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 80%;
+        border: 2px rgb(36, 63, 36) solid;
+        // margin: 12px;
+        // padding: 6px;
+        border-radius: 6px;
+        justify-self: center;
+        &.passed {
+            background-color: rgba(36, 63, 36, 0.75);
+            // background-color: rgba(80, 80, 80, 0.7);
+        }
+        &.open {
+            background-color: pink;
+        }
+        &.disabled {
+            background-color: gray;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .grid {
+        font-size: 24px !important;
+    }
+    h2 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .grid {
+        font-size: 14px !important;
+    }
+    h2 {
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .grid {
+        font-size: 12px !important;
+    }
+    h2 {
+        font-size: 16px !important;
+    }
+}

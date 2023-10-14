@@ -1,0 +1,8 @@
+<div class="month" *ngFor="let month of timeline.months">
+    <div class="title">
+        <h2>{{month.name}}</h2>
+    </div>
+    <div class="grid">
+        <div class="day" [ngStyle]="{'grid-column': day.dow}" [class.open]="day.state === DAY_STATES.open" [class.passed]="day.state === DAY_STATES.passed" *ngFor="let day of month.days">{{day.day}}</div>
+    </div>
+</div>
